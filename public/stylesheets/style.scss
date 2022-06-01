@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$color1: #c4b6e4ff;
+$color2: #82cdfeff;
+$color3: #738ff1ff;
+$color4: #4250abff;
+$color5: #f66881ff;
+$color6: #6f64b4ff;
+$color7: #4a0c8dff;
+$color8: #1b0c40ff;
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+#composition {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: url("/assets/SVG/Composition.svg");
+    transform: scale(1.1);
+
+    z-index: -1;
+
+    #navigation {
+        position: fixed;
+        bottom: 4rem;
+        left: 50%;
+        width: 14rem;
+        height: 4rem;
+        transform: translate(-50%, 0);
+        background-color: $color8;
+        border: 1px solid $color5;
+        border-radius: 2rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all 1s ease;
+
+        box-shadow: 3.4px 3.4px 2.7px rgba(0, 0, 0, 0.022),
+            8.7px 8.7px 6.9px rgba(0, 0, 0, 0.031),
+            17.7px 17.7px 14.2px rgba(0, 0, 0, 0.039),
+            36.5px 36.5px 29.2px rgba(0, 0, 0, 0.048),
+            100px 100px 80px rgba(0, 0, 0, 0.07);
+
+        .device {
+            height: 3rem;
+            width: 3rem;
+            border: 1px solid $color3;
+            border-radius: 2rem;
+            margin: 0 0.2rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: all 0.3s ease;
+
+            .bi {
+                font-size: 1.5em;
+                color: $color3;
+                z-index: 7;
+                transition: all 0.3s ease;
+            }
+
+            &.active {
+                background-color: $color3;
+                .bi {
+                    color: $color8;
+                }
+            }
+        }
+
+        z-index: 5;
+    }
+
+    .components {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 10rem;
+        height: auto;
+    }
+
+    .light {
+        mix-blend-mode: screen;
+        position: absolute;
+    }
+
+    #hanging_light_body {
+        width: 5rem;
+        left: 15rem;
+        top: -2rem;
+    }
+
+    #bed_lamp_body {
+        left: 31.8rem;
+        top: 28.5rem;
+        height: auto;
+        width: 3rem;
+        opacity: 0;
+    }
+
+    #fan_body {
+        width: 12rem;
+        left: 6rem;
+        top: 27.5rem;
+        opacity: 0.3;
+    }
+
+    #fan_head {
+        width: 9rem;
+        left: 10.2rem;
+        top: 23rem;
+        opacity: 0.3;
+        z-index: 3;
+    }
+
+    #fan_leaf {
+        width: 7rem;
+        left: 11.15rem;
+        top: 23.9rem;
+
+        &.on {
+            animation: rotation 0.1s linear infinite;
+        }
+    }
+
+    #glass_light {
+        width: 34.45rem;
+        right: -0rem;
+        top: 4rem;
+        opacity: 1;
+        transform: translate(0%, -0.04rem);
+
+        opacity: 0;
+    }
+
+    #hanging_light {
+        width: 20rem;
+        left: 8rem;
+        top: 8rem;
+        transform: translate(-0.1rem, -0.17rem);
+        opacity: 0;
+
+    }
+
+    #bed_lamp_light {
+        // mix-blend-mode: normal;
+        left: 12rem;
+        top: 9rem;
+        height: auto;
+        width: 40rem;
+        transform: translate(0rem, 0rem);
+
+        opacity: 0;
+
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

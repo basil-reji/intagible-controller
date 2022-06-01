@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+#composition {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("/assets/SVG/Composition.svg");
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  z-index: -1;
+}
+
+#composition #navigation {
+  position: fixed;
+  bottom: 4rem;
+  left: 50%;
+  width: 14rem;
+  height: 4rem;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  background-color: #1b0c40ff;
+  border: 1px solid #f66881ff;
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-box-shadow: 3.4px 3.4px 2.7px rgba(0, 0, 0, 0.022), 8.7px 8.7px 6.9px rgba(0, 0, 0, 0.031), 17.7px 17.7px 14.2px rgba(0, 0, 0, 0.039), 36.5px 36.5px 29.2px rgba(0, 0, 0, 0.048), 100px 100px 80px rgba(0, 0, 0, 0.07);
+          box-shadow: 3.4px 3.4px 2.7px rgba(0, 0, 0, 0.022), 8.7px 8.7px 6.9px rgba(0, 0, 0, 0.031), 17.7px 17.7px 14.2px rgba(0, 0, 0, 0.039), 36.5px 36.5px 29.2px rgba(0, 0, 0, 0.048), 100px 100px 80px rgba(0, 0, 0, 0.07);
+  z-index: 5;
+}
+
+#composition #navigation .device {
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid #738ff1ff;
+  border-radius: 2rem;
+  margin: 0 0.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#composition #navigation .device .bi {
+  font-size: 1.5em;
+  color: #738ff1ff;
+  z-index: 7;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#composition #navigation .device.active {
+  background-color: #738ff1ff;
+}
+
+#composition #navigation .device.active .bi {
+  color: #1b0c40ff;
+}
+
+#composition .components {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10rem;
+  height: auto;
+}
+
+#composition .light {
+  mix-blend-mode: screen;
+  position: absolute;
+}
+
+#composition #hanging_light_body {
+  width: 5rem;
+  left: 15rem;
+  top: -2rem;
+}
+
+#composition #bed_lamp_body {
+  left: 31.8rem;
+  top: 28.5rem;
+  height: auto;
+  width: 3rem;
+  opacity: 0;
+}
+
+#composition #fan_body {
+  width: 12rem;
+  left: 6rem;
+  top: 27.5rem;
+  opacity: 0.3;
+}
+
+#composition #fan_head {
+  width: 9rem;
+  left: 10.2rem;
+  top: 23rem;
+  opacity: 0.3;
+  z-index: 3;
+}
+
+#composition #fan_leaf {
+  width: 7rem;
+  left: 11.15rem;
+  top: 23.9rem;
+}
+
+#composition #fan_leaf.on {
+  -webkit-animation: rotation 0.1s linear infinite;
+          animation: rotation 0.1s linear infinite;
+}
+
+#composition #glass_light {
+  width: 34.45rem;
+  right: -0rem;
+  top: 4rem;
+  opacity: 1;
+  -webkit-transform: translate(0%, -0.04rem);
+          transform: translate(0%, -0.04rem);
+  opacity: 0;
+}
+
+#composition #hanging_light {
+  width: 20rem;
+  left: 8rem;
+  top: 8rem;
+  -webkit-transform: translate(-0.1rem, -0.17rem);
+          transform: translate(-0.1rem, -0.17rem);
+  opacity: 0;
+}
+
+#composition #bed_lamp_light {
+  left: 12rem;
+  top: 9rem;
+  height: auto;
+  width: 40rem;
+  -webkit-transform: translate(0rem, 0rem);
+          transform: translate(0rem, 0rem);
+  opacity: 0;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}

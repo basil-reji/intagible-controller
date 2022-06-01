@@ -1,0 +1,37 @@
+<p>
+    f=input('frequancy'); t=0:0.01:1;<br>
+
+    adc=1;<br>
+
+    mt=sin (2*pi*t*f) +adc;<br>
+
+    1=input('input level');<br>
+
+    n=ceil(log2 (1));<br>
+
+    vmax-max (mt): <br>
+    vmin-min (mt): <br>
+    stepsize= (vmax-vmin)/1; 
+    disp (stepsize); 
+    level= (vmin: stepsize: vmax-stepsize);<br>
+
+    for i=1:length (mt);<br>
+        [val, idx]-min (abs (mt (i)-level)); <br>
+        qnzmt (i)=level (idx); <br>
+        errmt (i)-mt (i)-qnzmt (i);<br>
+
+        snr=norm (mt)/norm (errmt);<br>
+
+        disp (snr);<br>
+
+    end<br>
+
+    for i=1:length (mt) 
+        snrd-norm (mt (i))/norm (errmt (i))<br>
+
+        db (i)=10 log10 (snrd);<br>
+
+    end<br>
+
+    plot(t, db(i));<br>
+</p>
